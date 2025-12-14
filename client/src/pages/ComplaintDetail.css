@@ -1,0 +1,177 @@
+.complaint-detail-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 20px;
+  background: var(--background);
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.complaint-detail-card {
+  margin-top: 20px;
+}
+
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+.complaint-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.complaint-date {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.complaint-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  gap: 10px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.info-value {
+  color: var(--text-primary);
+}
+
+.complaint-description {
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border);
+}
+
+.complaint-description h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.complaint-description p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.feedback-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border);
+}
+
+.feedback-button {
+  width: 100%;
+}
+
+.feedback-form-card {
+  margin-top: 20px;
+  background: var(--background);
+}
+
+.feedback-form-card h3 {
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.feedbacks-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid var(--border);
+}
+
+.feedbacks-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.feedbacks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-item {
+  background: var(--background);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.feedback-header strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.feedback-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.rating {
+  font-size: 1.2rem;
+}
+
+.feedback-comment {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .complaint-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .complaint-title {
+    font-size: 1.5rem;
+  }
+
+  .feedback-actions {
+    flex-direction: column-reverse;
+  }
+
+  .feedback-actions button {
+    width: 100%;
+  }
+}
+

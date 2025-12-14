@@ -1,0 +1,11 @@
+create database samadhan_desk;
+
+use samadhan_desk;
+
+create table user (userID int auto_increment primary key, name varchar(30) not null, email varchar(30) not null, password varchar(20) not null, phone varchar(10) not null, address varchar(30) not null, role enum("citizen", "officer", "admin") not null default "citizen");
+
+create table department (deptID int auto_increment primary key, deptName varchar(20) not null, deptHead varchar(30) not null, email varchar(30) not null, phone varchar(10) not null);
+
+create table complaint (complaintID int AUTO_INCREMENT PRIMARY KEY, userID INT, deptID INT, complaintType ENUM('Sanitation & Cleanliness', 'Water Supply', 'Electricity Issues', 'Roads & Infrastructure', 'Public Safety & Security', 'Environmental Issues', 'Government Service Issues', 'Health & Hygiene', 'Transport & Traffic', 'Other') NOT NULL DEFAULT 'Other', Description VARCHAR(100) NOT NULL, Location VARCHAR(30) NOT NULL, submissionDate DATE NOT NULL, Status ENUM('Processing', 'Solved') NOT NULL DEFAULT 'Processing', FOREIGN KEY (userID) REFERENCES user(userID), FOREIGN KEY (deptID) REFERENCES department(deptID));
+
+create table feedback (feedbackID int auto_increment primary key, complaintID int not null, userID int not null, rating int not null, comment varchar(30) not null, feedbackDate date not null, foreign key (complaintID) references complaint(complaintID), foreign key (userID) references user(userID));
